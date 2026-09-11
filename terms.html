@@ -3,19 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
 <title>Grid Cutter — Terms & Conditions</title>
 <style>
-  body { background:#0c0c0f; color:#f1efe9; font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.6; max-width:680px; margin:0 auto; padding:32px 20px 60px; }
-  h1 { color:#e9a13b; font-size:26px; }
-  h2 { color:#e9a13b; font-size:18px; margin-top:32px; }
-  p, li { color:#c9c9d1; font-size:15px; }
-  a { color:#e9a13b; }
-  .updated { color:#8b8b96; font-size:13px; }
+  /* Same palette as the app (src/theme.js): white/black, pink accent. */
+  :root {
+    --fondo: #FFFFFF;
+    --tinta: #000000;
+    --secundario: #5C5C58;
+    --linea: #E2E2E2;
+    --acento: #FF2E88;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #000000;
+      --tinta: #FFFFFF;
+      --secundario: #9A9A96;
+      --linea: #232323;
+      --acento: #FF4D9A;
+    }
+  }
+  * { border-radius: 0; }
+  html { background: var(--fondo); }
+  body { background: var(--fondo); color: var(--tinta); font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; max-width: 680px; margin: 0 auto; padding: 32px 20px 60px; }
+  h1 { color: var(--acento); font-size: 26px; line-height: 1.2; letter-spacing: -0.01em; }
+  h2 { color: var(--acento); font-size: 18px; margin-top: 32px; }
+  p, li { color: var(--tinta); font-size: 15px; }
+  a { color: var(--acento); text-underline-offset: 2px; }
+  .updated { color: var(--secundario); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Roboto Mono", "Liberation Mono", monospace; font-size: 13px; letter-spacing: 0.04em; padding-bottom: 20px; border-bottom: 1px solid var(--linea); }
 </style>
 </head>
 <body>
   <h1>Terms & Conditions — Grid Cutter</h1>
-  <p class="updated">Last updated: July 14, 2026</p>
+  <p class="updated">Last updated: September 11, 2026</p>
 
   <p>By downloading or using Grid Cutter ("the app"), you agree to these terms.</p>
 

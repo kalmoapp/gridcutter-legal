@@ -3,19 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
 <title>Grid Cutter — Privacy Policy</title>
 <style>
-  body { background:#0c0c0f; color:#f1efe9; font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.6; max-width:680px; margin:0 auto; padding:32px 20px 60px; }
-  h1 { color:#e9a13b; font-size:26px; }
-  h2 { color:#e9a13b; font-size:18px; margin-top:32px; }
-  p, li { color:#c9c9d1; font-size:15px; }
-  a { color:#e9a13b; }
-  .updated { color:#8b8b96; font-size:13px; }
+  /* Same palette as the app (src/theme.js): white/black, pink accent. */
+  :root {
+    --fondo: #FFFFFF;
+    --tinta: #000000;
+    --secundario: #5C5C58;
+    --linea: #E2E2E2;
+    --acento: #FF2E88;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #000000;
+      --tinta: #FFFFFF;
+      --secundario: #9A9A96;
+      --linea: #232323;
+      --acento: #FF4D9A;
+    }
+  }
+  * { border-radius: 0; }
+  html { background: var(--fondo); }
+  body { background: var(--fondo); color: var(--tinta); font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; max-width: 680px; margin: 0 auto; padding: 32px 20px 60px; }
+  h1 { color: var(--acento); font-size: 26px; line-height: 1.2; letter-spacing: -0.01em; }
+  h2 { color: var(--acento); font-size: 18px; margin-top: 32px; }
+  p, li { color: var(--tinta); font-size: 15px; }
+  a { color: var(--acento); text-underline-offset: 2px; }
+  .updated { color: var(--secundario); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Roboto Mono", "Liberation Mono", monospace; font-size: 13px; letter-spacing: 0.04em; padding-bottom: 20px; border-bottom: 1px solid var(--linea); }
 </style>
 </head>
 <body>
   <h1>Privacy Policy — Grid Cutter</h1>
-  <p class="updated">Last updated: July 14, 2026</p>
+  <p class="updated">Last updated: September 11, 2026</p>
 
   <p>Grid Cutter ("the app") is developed and maintained by the Grid Cutter team. This policy explains what happens with your data when you use the app.</p>
 
@@ -24,6 +46,9 @@
 
   <h2>Purchases</h2>
   <p>Grid Cutter offers an optional PRO unlock (monthly subscription or one-time lifetime purchase). Purchases are processed by Google Play Billing and verified using RevenueCat, a third-party subscription management service. RevenueCat receives purchase/transaction information (such as your anonymous user ID and purchase receipt) to confirm your entitlement — it does not receive your photos or any content you create in the app. See RevenueCat's own privacy policy at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a> for details on how they handle this data.</p>
+
+  <h2>Error and crash reports</h2>
+  <p>So we can find and fix problems, the app automatically sends a report when it hits an error or crashes. These reports are processed by Sentry, a third-party error-monitoring service, and the data is hosted in the European Union. A report contains only the technical error — what failed and where in the app's code — together with technical details such as the app version, the device model and the Android version. Reports <strong>never include your photos, the text you type in the app, or the paths or names of your files</strong>. See Sentry's own privacy policy at <a href="https://sentry.io/privacy/">sentry.io/privacy</a> for details on how they handle this data.</p>
 
   <h2>What we don't do</h2>
   <p>We do not require an account or login. We do not collect your name, email, or contacts. We do not run ads or third-party ad trackers. We do not sell or share your data with advertisers.</p>
